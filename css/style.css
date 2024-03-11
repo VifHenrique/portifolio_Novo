@@ -185,6 +185,8 @@ body {
     max-width: 800px; /* Largura máxima da seção */
     margin: 0 auto; /* Centraliza horizontalmente */
     text-align: center; /* Alinha o conteúdo ao centro */
+    justify-items: center;
+    align-items: center;
 }
 
 /* Título da seção */
