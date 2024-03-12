@@ -166,7 +166,7 @@ body {
     background-color: orange;
     padding: 20px;
     margin-left: 270px; /* Margem à esquerda para evitar sobreposição com a barra lateral */
-    display: flex; /* Ativa o layout flexível */
+    display:inline;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     flex-direction: column; /* Alinha os itens verticalmente */
@@ -185,19 +185,21 @@ body {
     max-width: 800px; /* Largura máxima da seção */
     margin: 0 auto; /* Centraliza horizontalmente */
     text-align: center; /* Alinha o conteúdo ao centro */
-    justify-items: center;
-    align-items: center;
 }
 
 /* Título da seção */
 .section h2 {
     margin-bottom: 20px; /* Espaçamento inferior do título */
+    text-align: center; /* Centraliza o título */
+    
 }
 
 /* Parágrafo da seção */
 .section p {
     line-height: 1.6; /* Altura da linha */
     margin: 0; /* Remove a margem padrão */
+    text-align: center; /* Centraliza o parágrafo */
+    
 }
 
 /* Formulário de contato */
@@ -247,6 +249,7 @@ body {
 
 .icons i:hover {
     transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+    color: var(--skin-color); /* Altera a cor do ícone ao passar o mouse */
 }
 
 /* Rodapé */
@@ -255,4 +258,47 @@ body {
     color: white; /* Cor do texto do rodapé */
     padding: 20px 0; /* Espaçamento interno do rodapé */
     text-align: center; /* Alinha o texto ao centro */
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.dark-mode-toggle i {
+    font-size: 24px;
+    color: #333; /* Cor do ícone */
+    
+}
+/* Ícone da lua */
+.dark-mode-toggle i {
+    font-size: 24px;
+    transition: color 0.3s; /* Transição para a mudança de cor */
+}
+
+/* Cor do ícone da lua no modo claro */
+.light-mode .dark-mode-toggle i {
+    color: var(--skin-color-light);
+}
+
+/* Cor do ícone da lua no modo escuro */
+.dark-mode .dark-mode-toggle i {
+    color: var(--skin-color-dark);
+}
+
+/* Efeito de brilho no hover do ícone da lua */
+.dark-mode-toggle i:hover {
+    filter: brightness(80%); /* Efeito de brilho no hover do ícone da lua no modo escuro */
+}
+
+.light-mode .dark-mode-toggle i:hover {
+    filter: brightness(120%); /* Efeito de brilho no hover do ícone da lua no modo claro */
+}
+
+/* Hover igual ao da seção projetos */
+.dark-mode-toggle i:hover {
+    color: var(--skin-color); /* Cor brilhante do ícone da lua no hover */
 }
