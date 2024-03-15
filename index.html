@@ -44,13 +44,13 @@
 
         </div>
         <!-- Aside End -->
-         <br><br>
+        
         <!-- Main Content Start -->
-        <div class="main-content">
+        <div class="main-content" id="main_content">
             <div class="dark-mode-toggle">
-                <i class="fas fa-moon"></i>
+                <i class="fas fa-moon" id="dark-mode-toggle"></i>
             </div>
-            
+            <br><br><br>
             <!-- Home Section Start -->
             <section class="home" id="Home">
                 <div class="container">
@@ -59,7 +59,7 @@
                 </div>
             </section>
             <!-- Home Section End -->
-                 <br><br>
+                 <br><br><br>
 
 
             <!-- Sobre Section Start -->
@@ -116,7 +116,7 @@
                         <i class="fab fa-css3-alt"></i>
                         <i class="fab fa-js"></i>
                         <i class="fab fa-react"></i>
-                        <i class="fab fa-angular"></i>
+                        <i class="fab fa-angular"></i> 
                         <i class="fab fa-php"></i>
                         <i class="fab fa-java"></i>
                         <i class="fab fa-python"></i>
@@ -133,11 +133,11 @@
             <section class="contato" id="Contato">
                 <div class="container">
                     <h2>Contato</h2>
-                    <form action="processar_form.php" method="post" class="contact-form">
+                    <form action="configContato.php" method="post" class="contact-form">
                         <input type="text" id="nome" name="nome" placeholder="Nome" required>
                         <input type="email" id="email" name="email" placeholder="Email" required>
                         <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
-                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Enviar" class="buttonColor">
                     </form>
                 </div>
             </section>
@@ -154,5 +154,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
